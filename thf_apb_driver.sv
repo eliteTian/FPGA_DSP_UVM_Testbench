@@ -45,11 +45,19 @@ class thf_apb_driver extends uvm_driver#(.REQ(thf_apb_item_drv)) implements thf_
   protected virtual task drive_transaction(thf_apb_item_drv item);
      thf_apb_vif vif = agent_config.get_vif();
     `uvm_info("DEBUG", $sformatf("Driving \"%0s\" :%0s", item.get_full_name(), item.convert2string()), UVM_NONE)
+    
     for(int i = 0; i < item.pre_drive_delay; i++) begin
       @(posedge vif.pclk);
     end
+    @(posedge vif.pclk);    
+
+  //  logic[31:0] i = item.pre_drive_delay;   
+//     do begin
+//       @(posedge vif.pclk);
+//     end while (i--!=0);  
+    //@(posedge vif.pclk);
     
-    vif.psel <= 1;
+    vif.psel <= 1; //Bug: psel not aligned to posedge of pclk
     //vif.penable <= 1; //this triggers assertion in the apb_if.sv
     vif.pwrite <= bit'(item.dir);
     vif.paddr <= item.addr;

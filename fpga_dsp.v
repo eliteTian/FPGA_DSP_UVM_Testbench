@@ -1,21 +1,28 @@
 
 
 module fpga_dsp(
-    input           clk,
-    input           rstn,
+//     input           clk,
+//     input           rstn,
     
+    input			axis4_s_aclk,
+    input			axis4_s_aresetn,
+  
     input [7:0]     axis4_s_tdata,
     output          axis4_s_tready,
     input           axis4_s_tvalid,
     input           axis4_s_tlast,
 
-    
+    input			axis4_m_aclk,
+    input			axis4_m_aresetn, 
+  
     output[7:0]     axis4_m_tdata,
     input           axis4_m_tready,
     output          axis4_m_tvalid,
     output          axis4_m_tlast,
     
-    
+    input           apb_slave_pclk, 
+    input			apb_slave_presetn,
+  
     input[3:0]      apb_slave_paddr,
     input           apb_slave_penable,
     output[31:0]    apb_slave_prdata, 
@@ -33,8 +40,8 @@ assign apb_slave_pready = 1'b1;
 reg[31:0] apb_slave_prdata_r;
 wire [1:0] sel = reg0[1:0];
 
-always@(posedge clk, negedge rstn) begin
-    if(!rstn) begin
+  always@(posedge apb_slave_pclk, negedge apb_slave_presetn) begin
+    if(!apb_slave_presetn) begin
        // rdata <= 0;
         reg0 <=0;
         reg1 <=0;
@@ -119,8 +126,8 @@ reg signed [19:0] sum3;
 assign axis4_s_tready = axis4_m_tready;
 
 //shift register.
-always@(posedge clk, negedge rstn) begin
-    if(!rstn) begin
+  always@(posedge axis4_s_aclk, negedge axis4_s_aresetn) begin
+    if(!axis4_s_aresetn) begin
         for(i=0; i<9; i=i+1) begin
             delayed_signal[i] <= 0;
         end
@@ -134,8 +141,8 @@ end
 
 //always@(posedge clk, negedge rstn) begin// unnecessary pipeline stages
 //always@* begin 
-always@(posedge clk, negedge rstn) begin
-    if(!rstn) begin
+  always@(posedge axis4_s_aclk, negedge axis4_s_aresetn ) begin
+    if(!axis4_s_aresetn) begin
         for(j=0; j<9; j=j+1) begin
             prod[j] <= 0;
         end
@@ -154,8 +161,8 @@ always@* begin
     sum0[4] = prod[8];
 end
 
-always@(posedge clk, negedge rstn) begin
-    if(!rstn) begin
+always@(posedge axis4_s_aclk, negedge axis4_s_aresetn) begin
+    if(!axis4_s_aresetn) begin
         sum1[0] <= 0;
         sum1[1] <= 0;
         sum1[2] <= 0;
@@ -171,8 +178,8 @@ always@* begin
     sum2[1] = sum1[2];
 end
 
-always@(posedge clk) begin
-    if(!rstn) begin
+  always@(posedge axis4_m_aclk , negedge axis4_m_aresetn) begin
+    if(!axis4_m_aresetn) begin
         sum3 <= 0;
 
     end else if(axis4_s_tvalid & axis4_m_tready) begin
@@ -180,8 +187,8 @@ always@(posedge clk) begin
     end
 end
 reg axis4_m_tvalid_r;
-always@(posedge clk) begin
-    if(!rstn) begin
+  always@(posedge axis4_m_aclk , negedge axis4_m_aresetn) begin
+    if(!axis4_m_aresetn) begin
         axis4_m_tvalid_r <= 1'b0;
     end else begin
         axis4_m_tvalid_r <= axis4_s_tvalid;

@@ -10,8 +10,10 @@
 		import uvm_pkg::*;
 		import thf_fpga_dsp_pkg::*;
 		import thf_apb_pkg::*;
+		import thf_axis_pkg::*;
 		`include "thf_fpga_dsp_test_base.sv"
 		`include "thf_fpga_dsp_test_reg_access.sv"
+		`include "thf_fpga_dsp_test_random.sv"
 
 		
 	endpackage

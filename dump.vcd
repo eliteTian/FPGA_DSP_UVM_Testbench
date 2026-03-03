@@ -1,5 +1,5 @@
 $date
-Thu Feb 19 18:55:27 2026
+Tue Mar  3 16:38:35 2026
 $end
 $version
 Riviera-PRO Version 2025.04.139.9738
@@ -25,138 +25,153 @@ $var reg 1 + has_checks $end
 $upscope $end
 
 
+$scope module axis_rx_if $end
+$var reg 1 , aresetn $end
+$var reg 1 - tvalid $end
+$var reg 1 . tlast $end
+$var reg 1 / tready $end
+$var reg 8 0 tdata [7:0] $end
+$var reg 1 1 has_checks $end
+$var parameter 32 2 DATA_WIDTH [31:0] $end
+$upscope $end
+
+
 $scope module fpga_dsp_u $end
-$var wire 1 , clk $end
-$var wire 1 - rstn $end
-$var wire 8 . axis4_s_tdata [7:0] $end
-$var wire 1 / axis4_s_tready $end
-$var wire 1 0 axis4_s_tvalid $end
-$var wire 1 0 axis4_s_tlast $end
-$var wire 8 1 axis4_m_tdata [7:0] $end
-$var wire 1 0 axis4_m_tready $end
-$var wire 1 2 axis4_m_tvalid $end
-$var wire 1 / axis4_m_tlast $end
-$var wire 4 3 apb_slave_paddr [3:0] $end
-$var wire 1 4 apb_slave_penable $end
-$var wire 32 5 apb_slave_prdata [31:0] $end
-$var wire 32 6 apb_slave_pwdata [31:0] $end
-$var wire 1 7 apb_slave_pwrite $end
-$var wire 1 8 apb_slave_psel $end
-$var wire 1 9 apb_slave_pready $end
-$var wire 1 : apb_slave_pslverr $end
-$var wire 2 ; sel [1:0] $end
-$var wire 8 < clean_sig_msb_shift_0 [7:0] $end
-$var wire 8 = clean_sig_msb_shift_1 [7:0] $end
-$var wire 8 > clean_sig_msb_shift_2 [7:0] $end
-$var wire 8 ? clean_sig_msb_shift_3 [7:0] $end
-$var wire 8 @ clean_sig [7:0] $end
-$var reg 32 A reg0 [31:0] $end
-$var reg 32 B reg1 [31:0] $end
-$var reg 32 C reg2 [31:0] $end
-$var reg 32 D reg3 [31:0] $end
-$var reg 32 E rdata [31:0] $end
-$var reg 32 F apb_slave_prdata_r [31:0] $end
-$var integer 32 G i $end
-$var integer 32 H j $end
-$var reg 20 I sum3 [19:0] $end
-$var reg 1 J axis4_m_tvalid_r $end
+$var wire 1 3 axis4_s_aclk $end
+$var wire 1 4 axis4_s_aresetn $end
+$var wire 8 5 axis4_s_tdata [7:0] $end
+$var wire 1 6 axis4_s_tready $end
+$var wire 1 7 axis4_s_tvalid $end
+$var wire 1 8 axis4_s_tlast $end
+$var wire 1 9 axis4_m_aclk $end
+$var wire 1 9 axis4_m_aresetn $end
+$var wire 8 : axis4_m_tdata [7:0] $end
+$var wire 1 9 axis4_m_tready $end
+$var wire 1 ; axis4_m_tvalid $end
+$var wire 1 < axis4_m_tlast $end
+$var wire 1 3 apb_slave_pclk $end
+$var wire 1 = apb_slave_presetn $end
+$var wire 4 > apb_slave_paddr [3:0] $end
+$var wire 1 ? apb_slave_penable $end
+$var wire 32 @ apb_slave_prdata [31:0] $end
+$var wire 32 A apb_slave_pwdata [31:0] $end
+$var wire 1 B apb_slave_pwrite $end
+$var wire 1 C apb_slave_psel $end
+$var wire 1 D apb_slave_pready $end
+$var wire 1 E apb_slave_pslverr $end
+$var wire 2 F sel [1:0] $end
+$var wire 8 G clean_sig_msb_shift_0 [7:0] $end
+$var wire 8 H clean_sig_msb_shift_1 [7:0] $end
+$var wire 8 I clean_sig_msb_shift_2 [7:0] $end
+$var wire 8 J clean_sig_msb_shift_3 [7:0] $end
+$var wire 8 K clean_sig [7:0] $end
+$var reg 32 L reg0 [31:0] $end
+$var reg 32 M reg1 [31:0] $end
+$var reg 32 N reg2 [31:0] $end
+$var reg 32 O reg3 [31:0] $end
+$var reg 32 P rdata [31:0] $end
+$var reg 32 Q apb_slave_prdata_r [31:0] $end
+$var integer 32 R i $end
+$var integer 32 S j $end
+$var reg 20 T sum3 [19:0] $end
+$var reg 1 U axis4_m_tvalid_r $end
 $upscope $end
 
 $upscope $end
 
 
 $scope module uvm_pkg $end
-$var integer 32 K UVM_UNBOUNDED_CONNECTIONS $end
-$var reg 1 L uvm_start_uvm_declarations $end
-$var integer 32 M uvm_global_random_seed $end
-$var parameter 32 N UVM_HDL_MAX_WIDTH [31:0] $end
-$var parameter 32 O UVM_STREAMBITS [31:0] $end
-$var parameter 32 P UVM_RADIX [31:0] $end
-$var parameter 32 Q UVM_MACRO_NUMFLAGS [31:0] $end
-$var parameter 32 R UVM_DEFAULT [31:0] $end
-$var parameter 32 S UVM_ALL_ON [31:0] $end
-$var parameter 32 T UVM_FLAGS_ON [31:0] $end
-$var parameter 32 U UVM_FLAGS_OFF [31:0] $end
-$var parameter 32 V UVM_COPY [31:0] $end
-$var parameter 32 W UVM_NOCOPY [31:0] $end
-$var parameter 32 X UVM_COMPARE [31:0] $end
-$var parameter 32 Y UVM_NOCOMPARE [31:0] $end
-$var parameter 32 Z UVM_PRINT [31:0] $end
-$var parameter 32 [ UVM_NOPRINT [31:0] $end
-$var parameter 32 \ UVM_RECORD [31:0] $end
-$var parameter 32 ] UVM_NORECORD [31:0] $end
-$var parameter 32 ^ UVM_PACK [31:0] $end
-$var parameter 32 _ UVM_NOPACK [31:0] $end
-$var parameter 32 ` UVM_PHYSICAL [31:0] $end
-$var parameter 32 a UVM_ABSTRACT [31:0] $end
-$var parameter 32 b UVM_READONLY [31:0] $end
-$var parameter 32 c UVM_NODEFPRINT [31:0] $end
-$var parameter 32 d UVM_MACRO_EXTRAS [31:0] $end
-$var parameter 32 e UVM_FLAGS [31:0] $end
-$var parameter 32 f UVM_UNPACK [31:0] $end
-$var parameter 32 g UVM_CHECK_FIELDS [31:0] $end
-$var parameter 32 h UVM_END_DATA_EXTRA [31:0] $end
-$var parameter 32 i UVM_START_FUNCS [31:0] $end
-$var parameter 32 j UVM_SET [31:0] $end
-$var parameter 32 k UVM_SETINT [31:0] $end
-$var parameter 32 l UVM_SETOBJ [31:0] $end
-$var parameter 32 m UVM_SETSTR [31:0] $end
-$var parameter 32 n UVM_END_FUNCS [31:0] $end
-$var parameter 32 o UVM_STR_CRC_POLYNOMIAL [31:0] $end
-$var parameter 32 p UVM_STDOUT [31:0] $end
-$var parameter 32 q UVM_LOG_UVM_RM_RECORD [31:0] $end
-$var parameter 32 r UVM_LINE_WIDTH [31:0] $end
-$var parameter 32 s UVM_NUM_LINES [31:0] $end
-$var parameter 32 t UVM_SMALL_STRING [31:0] $end
-$var parameter 32 u UVM_LARGE_STRING [31:0] $end
+$var integer 32 V UVM_UNBOUNDED_CONNECTIONS $end
+$var reg 1 W uvm_start_uvm_declarations $end
+$var integer 32 X uvm_global_random_seed $end
+$var parameter 32 Y UVM_HDL_MAX_WIDTH [31:0] $end
+$var parameter 32 Z UVM_STREAMBITS [31:0] $end
+$var parameter 32 [ UVM_RADIX [31:0] $end
+$var parameter 32 \ UVM_MACRO_NUMFLAGS [31:0] $end
+$var parameter 32 ] UVM_DEFAULT [31:0] $end
+$var parameter 32 ^ UVM_ALL_ON [31:0] $end
+$var parameter 32 _ UVM_FLAGS_ON [31:0] $end
+$var parameter 32 ` UVM_FLAGS_OFF [31:0] $end
+$var parameter 32 a UVM_COPY [31:0] $end
+$var parameter 32 b UVM_NOCOPY [31:0] $end
+$var parameter 32 c UVM_COMPARE [31:0] $end
+$var parameter 32 d UVM_NOCOMPARE [31:0] $end
+$var parameter 32 e UVM_PRINT [31:0] $end
+$var parameter 32 f UVM_NOPRINT [31:0] $end
+$var parameter 32 g UVM_RECORD [31:0] $end
+$var parameter 32 h UVM_NORECORD [31:0] $end
+$var parameter 32 i UVM_PACK [31:0] $end
+$var parameter 32 j UVM_NOPACK [31:0] $end
+$var parameter 32 k UVM_PHYSICAL [31:0] $end
+$var parameter 32 l UVM_ABSTRACT [31:0] $end
+$var parameter 32 m UVM_READONLY [31:0] $end
+$var parameter 32 n UVM_NODEFPRINT [31:0] $end
+$var parameter 32 o UVM_MACRO_EXTRAS [31:0] $end
+$var parameter 32 p UVM_FLAGS [31:0] $end
+$var parameter 32 q UVM_UNPACK [31:0] $end
+$var parameter 32 r UVM_CHECK_FIELDS [31:0] $end
+$var parameter 32 s UVM_END_DATA_EXTRA [31:0] $end
+$var parameter 32 t UVM_START_FUNCS [31:0] $end
+$var parameter 32 u UVM_SET [31:0] $end
+$var parameter 32 v UVM_SETINT [31:0] $end
+$var parameter 32 w UVM_SETOBJ [31:0] $end
+$var parameter 32 x UVM_SETSTR [31:0] $end
+$var parameter 32 y UVM_END_FUNCS [31:0] $end
+$var parameter 32 z UVM_STR_CRC_POLYNOMIAL [31:0] $end
+$var parameter 32 { UVM_STDOUT [31:0] $end
+$var parameter 32 | UVM_LOG_UVM_RM_RECORD [31:0] $end
+$var parameter 32 } UVM_LINE_WIDTH [31:0] $end
+$var parameter 32 ~ UVM_NUM_LINES [31:0] $end
+$var parameter 32 !! UVM_SMALL_STRING [31:0] $end
+$var parameter 32 "! UVM_LARGE_STRING [31:0] $end
 
 $scope function uvm_hdl_check_path $end
-$var integer 32 v uvm_hdl_check_path $end
+$var integer 32 #! uvm_hdl_check_path $end
 $upscope $end
 
 
 $scope function uvm_hdl_deposit $end
-$var reg 1024 w value [1023:0] $end
-$var integer 32 x uvm_hdl_deposit $end
+$var reg 1024 $! value [1023:0] $end
+$var integer 32 %! uvm_hdl_deposit $end
 $upscope $end
 
 
 $scope function uvm_hdl_force $end
-$var reg 1024 y value [1023:0] $end
-$var integer 32 z uvm_hdl_force $end
+$var reg 1024 &! value [1023:0] $end
+$var integer 32 '! uvm_hdl_force $end
 $upscope $end
 
 
 $scope task uvm_hdl_force_time $end
-$var reg 1024 { value [1023:0] $end
-$var time 64 | force_time $end
+$var reg 1024 (! value [1023:0] $end
+$var time 64 )! force_time $end
 $upscope $end
 
 
 $scope function uvm_hdl_release_and_read $end
-$var reg 1024 } value [1023:0] $end
-$var integer 32 ~ uvm_hdl_release_and_read $end
+$var reg 1024 *! value [1023:0] $end
+$var integer 32 +! uvm_hdl_release_and_read $end
 $upscope $end
 
 
 $scope function uvm_hdl_release $end
-$var integer 32 !! uvm_hdl_release $end
+$var integer 32 ,! uvm_hdl_release $end
 $upscope $end
 
 
 $scope function uvm_hdl_read $end
-$var reg 1024 "! value [1023:0] $end
-$var integer 32 #! uvm_hdl_read $end
+$var reg 1024 -! value [1023:0] $end
+$var integer 32 .! uvm_hdl_read $end
 $upscope $end
 
 
 $scope function uvm_dpi_get_next_arg_c $end
-$var integer 32 $! init $end
+$var integer 32 /! init $end
 $upscope $end
 
 
 $scope function uvm_dpi_get_next_arg $end
-$var integer 32 %! init $end
+$var integer 32 0! init $end
 $upscope $end
 
 
@@ -165,7 +180,7 @@ $upscope $end
 
 
 $scope function uvm_dpi_regexec $end
-$var integer 32 &! uvm_dpi_regexec $end
+$var integer 32 1! uvm_dpi_regexec $end
 $upscope $end
 
 
@@ -174,192 +189,192 @@ $upscope $end
 
 
 $scope function uvm_re_match $end
-$var integer 32 '! uvm_re_match $end
+$var integer 32 2! uvm_re_match $end
 $upscope $end
 
 
 $scope function uvm_radix_to_string $end
-$var integer 32 (! radix $end
+$var integer 32 3! radix $end
 $upscope $end
 
 
 $scope function uvm_instance_scope $end
-$var reg 8 )! c [7:0] $end
-$var integer 32 *! pos $end
+$var reg 8 4! c [7:0] $end
+$var integer 32 5! pos $end
 $upscope $end
 
 
 $scope function uvm_oneway_hash $end
-$var integer 32 +! seed $end
-$var integer 32 ,! uvm_oneway_hash $end
-$var reg 1 -! msb $end
-$var reg 8 .! current_byte [7:0] $end
-$var reg 32 /! crc1 [31:0] $end
+$var integer 32 6! seed $end
+$var integer 32 7! uvm_oneway_hash $end
+$var reg 1 8! msb $end
+$var reg 8 9! current_byte [7:0] $end
+$var reg 32 :! crc1 [31:0] $end
 $upscope $end
 
 
 $scope function uvm_create_random_seed $end
-$var integer 32 0! uvm_create_random_seed $end
+$var integer 32 ;! uvm_create_random_seed $end
 $upscope $end
 
 
 $scope function uvm_leaf_scope $end
-$var reg 8 1! scope_separator [7:0] $end
-$var reg 8 2! bracket_match [7:0] $end
-$var integer 32 3! pos $end
-$var integer 32 4! bmatches $end
+$var reg 8 <! scope_separator [7:0] $end
+$var reg 8 =! bracket_match [7:0] $end
+$var integer 32 >! pos $end
+$var integer 32 ?! bmatches $end
 $upscope $end
 
 
 $scope function get_radix_string_global $end
-$var integer 32 5! radix $end
+$var integer 32 @! radix $end
 $upscope $end
 
 
 $scope function uvm_bitstream_to_string $end
-$var reg 4096 6! value [4095:0] $end
-$var integer 32 7! size $end
-$var integer 32 8! radix $end
+$var reg 4096 A! value [4095:0] $end
+$var integer 32 B! size $end
+$var integer 32 C! radix $end
 
 $scope begin 13unnblk $end
-$var reg 4096 9! _t [4095:0] $end
+$var reg 4096 D! _t [4095:0] $end
 $upscope $end
 
 $upscope $end
 
 
 $scope function uvm_integral_to_string $end
-$var reg 64 :! value [63:0] $end
-$var integer 32 ;! size $end
-$var integer 32 <! radix $end
+$var reg 64 E! value [63:0] $end
+$var integer 32 F! size $end
+$var integer 32 G! radix $end
 
 $scope begin 15unnblk $end
-$var reg 64 =! _t [63:0] $end
+$var reg 64 H! _t [63:0] $end
 $upscope $end
 
 $upscope $end
 
 
 $scope function uvm_vector_to_string $end
-$var reg 4096 >! value [4095:0] $end
-$var integer 32 ?! size $end
-$var integer 32 @! radix $end
+$var reg 4096 I! value [4095:0] $end
+$var integer 32 J! size $end
+$var integer 32 K! radix $end
 $upscope $end
 
 
 $scope function uvm_get_array_index_int $end
-$var reg 1 A! is_wildcard $end
-$var integer 32 B! uvm_get_array_index_int $end
-$var integer 32 C! i $end
+$var reg 1 L! is_wildcard $end
+$var integer 32 M! uvm_get_array_index_int $end
+$var integer 32 N! i $end
 $upscope $end
 
 
 $scope function uvm_get_array_index_string $end
-$var reg 1 D! is_wildcard $end
-$var integer 32 E! i $end
+$var reg 1 O! is_wildcard $end
+$var integer 32 P! i $end
 $upscope $end
 
 
 $scope function uvm_is_array $end
-$var reg 1 F! uvm_is_array $end
+$var reg 1 Q! uvm_is_array $end
 $upscope $end
 
 
 $scope function set_global_timeout $end
-$var time 64 G! timeout $end
-$var reg 1 H! overridable $end
+$var time 64 R! timeout $end
+$var reg 1 S! overridable $end
 $upscope $end
 
 
 $scope function set_global_stop_timeout $end
-$var time 64 I! timeout $end
+$var time 64 T! timeout $end
 $upscope $end
 
 
 $scope function uvm_report_enabled $end
-$var integer 32 J! verbosity $end
-$var reg 2 K! severity $end
-$var integer 32 L! uvm_report_enabled $end
+$var integer 32 U! verbosity $end
+$var reg 2 V! severity $end
+$var integer 32 W! uvm_report_enabled $end
 $upscope $end
 
 
 $scope function uvm_report $end
-$var reg 2 M! severity $end
-$var integer 32 N! verbosity $end
-$var integer 32 O! line $end
-$var reg 1 P! report_enabled_checked $end
+$var reg 2 X! severity $end
+$var integer 32 Y! verbosity $end
+$var integer 32 Z! line $end
+$var reg 1 [! report_enabled_checked $end
 $upscope $end
 
 
 $scope function m__uvm_report_dpi $end
-$var integer 32 Q! severity $end
-$var integer 32 R! verbosity $end
-$var integer 32 S! line $end
+$var integer 32 \! severity $end
+$var integer 32 ]! verbosity $end
+$var integer 32 ^! line $end
 $upscope $end
 
 
 $scope function uvm_report_info $end
-$var integer 32 T! verbosity $end
-$var integer 32 U! line $end
-$var reg 1 V! report_enabled_checked $end
+$var integer 32 _! verbosity $end
+$var integer 32 `! line $end
+$var reg 1 a! report_enabled_checked $end
 $upscope $end
 
 
 $scope function uvm_report_warning $end
-$var integer 32 W! verbosity $end
-$var integer 32 X! line $end
-$var reg 1 Y! report_enabled_checked $end
+$var integer 32 b! verbosity $end
+$var integer 32 c! line $end
+$var reg 1 d! report_enabled_checked $end
 $upscope $end
 
 
 $scope function uvm_report_error $end
-$var integer 32 Z! verbosity $end
-$var integer 32 [! line $end
-$var reg 1 \! report_enabled_checked $end
+$var integer 32 e! verbosity $end
+$var integer 32 f! line $end
+$var reg 1 g! report_enabled_checked $end
 $upscope $end
 
 
 $scope function uvm_report_fatal $end
-$var integer 32 ]! verbosity $end
-$var integer 32 ^! line $end
-$var reg 1 _! report_enabled_checked $end
+$var integer 32 h! verbosity $end
+$var integer 32 i! line $end
+$var reg 1 j! report_enabled_checked $end
 $upscope $end
 
 
 $scope function uvm_string_to_severity $end
-$var reg 2 `! sev $end
-$var reg 1 a! uvm_string_to_severity $end
+$var reg 2 k! sev $end
+$var reg 1 l! uvm_string_to_severity $end
 $upscope $end
 
 
 $scope function set_config_int $end
-$var reg 4096 b! value [4095:0] $end
+$var reg 4096 m! value [4095:0] $end
 $upscope $end
 
 
 $scope function set_config_object $end
-$var reg 1 c! clone $end
+$var reg 1 n! clone $end
 $upscope $end
 
 
 $scope function uvm_is_match $end
-$var reg 1 d! uvm_is_match $end
+$var reg 1 o! uvm_is_match $end
 $upscope $end
 
 
 $scope function uvm_string_to_bits $end
-$var reg 115200 e! uvm_string_to_bits [115199:0] $end
+$var reg 115200 p! uvm_string_to_bits [115199:0] $end
 $upscope $end
 
 
 $scope function uvm_bits_to_string $end
-$var reg 115200 f! str [115199:0] $end
+$var reg 115200 q! str [115199:0] $end
 $upscope $end
 
 
 $scope task uvm_wait_for_nba_region $end
-$var integer 32 g! nba $end
-$var integer 32 h! next_nba $end
+$var integer 32 r! nba $end
+$var integer 32 s! next_nba $end
 $upscope $end
 
 $upscope $end
@@ -368,7 +383,7 @@ $upscope $end
 $scope module std $end
 
 $scope function randomize $end
-$var reg 1 i! randomize $end
+$var reg 1 t! randomize $end
 $upscope $end
 
 $upscope $end
@@ -386,393 +401,6640 @@ bx '
 b11111111111111111111111111111111 )
 0*
 1+
-0,
-1-
-bz .
+1,
+x-
+x.
 z/
-z0
-bx 1
-x2
-bx 3
-x4
-b11111111111111111111111111111111 5
-bx 6
+bx 0
+11
+b1000 2
+03
+14
+bx 5
+z6
 x7
 x8
-19
-0:
-bx ;
-bx <
-bx =
+z9
+bx :
+x;
+x<
+03
+1=
 bx >
-bx ?
-bx @
+x?
+b11111111111111111111111111111111 @
 bx A
-bx B
-bx C
-bx D
-bx E
-b11111111111111111111111111111111 F
+xB
+xC
+1D
+0E
+bx F
 bx G
 bx H
 bx I
-xJ
-b11111111111111111111111111111111 K
-1L
-b1000011111110111011111100011111 M
-b10000000000 N
-b1000000000000 O
-b1111000000000000000000000000 P
-b10001 Q
-b10101010101 R
-b101010101 S
-b101010101 T
-b0 U
-b1 V
-b10 W
-b100 X
-b1000 Y
-b10000 Z
-b100000 [
-b1000000 \
-b10000000 ]
-b100000000 ^
-b1000000000 _
-b10000000000000 `
-b100000000000000 a
-b1000000000000000 b
-b10000000000000000 c
-b100000000000000000 d
-b100000000000000001 e
-b100000000000000010 f
-b100000000000000011 g
-b100000000000000100 h
-b100000000000000101 i
-b100000000000000110 j
-b100000000000000110 k
-b100000000000000111 l
-b100000000000001000 m
-b100000000000001000 n
-b100110000010001110110110110 o
-b1 p
-b1000010 q
-b1111000 r
-b1111000 s
-b1110111111 t
-b11100000111111111 u
-b0 v
-bx w
-b0 x
-bx y
-b0 z
-bx {
-bx |
-bx }
-b0 ~
-b0 !!
-bx "!
+bx J
+bx K
+bx L
+bx M
+bx N
+bx O
+bx P
+b11111111111111111111111111111111 Q
+bx R
+bx S
+bx T
+xU
+b11111111111111111111111111111111 V
+1W
+b1000011111110111011111100011111 X
+b10000000000 Y
+b1000000000000 Z
+b1111000000000000000000000000 [
+b10001 \
+b10101010101 ]
+b101010101 ^
+b101010101 _
+b0 `
+b1 a
+b10 b
+b100 c
+b1000 d
+b10000 e
+b100000 f
+b1000000 g
+b10000000 h
+b100000000 i
+b1000000000 j
+b10000000000000 k
+b100000000000000 l
+b1000000000000000 m
+b10000000000000000 n
+b100000000000000000 o
+b100000000000000001 p
+b100000000000000010 q
+b100000000000000011 r
+b100000000000000100 s
+b100000000000000101 t
+b100000000000000110 u
+b100000000000000110 v
+b100000000000000111 w
+b100000000000001000 x
+b100000000000001000 y
+b100110000010001110110110110 z
+b1 {
+b1000010 |
+b1111000 }
+b1111000 ~
+b1110111111 !!
+b11100000111111111 "!
 b0 #!
-b0 $!
+bx $!
 b0 %!
-b0 &!
+bx &!
 b0 '!
-b0 (!
-b111010 )!
-b1000 *!
-b1000011111110111011111100011111 +!
-b1000110001111001011101000100101 ,!
-1-!
-b1110100 .!
-b11111001000001001011111111111101 /!
-b10010111001101101001100100110001 0!
+bx (!
+bx )!
+bx *!
+b0 +!
+b0 ,!
+bx -!
+b0 .!
+b0 /!
+b0 0!
 b0 1!
 b0 2!
 b0 3!
-b0 4!
-b0 5!
-bx 6!
-b0 7!
-b0 8!
-bx 9!
-bx :!
-b0 ;!
+b111010 4!
+b1000 5!
+b1000011111110111011111100011111 6!
+b11110111101100110001110010000 7!
+18!
+b1110100 9!
+b10001110010110110000010100100101 :!
+b10010111001101101001100100110001 ;!
 b0 <!
-bx =!
-bx >!
+b0 =!
+b0 >!
 b0 ?!
 b0 @!
-0A!
+bx A!
 b0 B!
 b0 C!
-0D!
-b0 E!
-0F!
-bx G!
-0H!
+bx D!
+bx E!
+b0 F!
+b0 G!
+bx H!
 bx I!
-b111110100 J!
+b0 J!
 b0 K!
-b0 L!
+0L!
 b0 M!
 b0 N!
-b0 O!
-0P!
-b0 Q!
-b0 R!
-b0 S!
-b0 T!
-b0 U!
-0V!
+0O!
+b0 P!
+0Q!
+bx R!
+0S!
+bx T!
+b111110100 U!
+b0 V!
 b0 W!
 b0 X!
-0Y!
+b0 Y!
 b0 Z!
-b0 [!
-0\!
+0[!
+b0 \!
 b0 ]!
 b0 ^!
-0_!
+b0 _!
 b0 `!
 0a!
-bx b!
-0c!
+b0 b!
+b0 c!
 0d!
-bx e!
-bx f!
-b100100 g!
-b100100 h!
-0i!
+b0 e!
+b0 f!
+0g!
+b0 h!
+b0 i!
+0j!
+b0 k!
+0l!
+bx m!
+0n!
+1o!
+bx p!
+bx q!
+b100101 r!
+b100101 s!
+0t!
 $end
 #3
 0"
-0-
-b1001 G
-b1001 H
+0,
+04
+0=
+b1001 R
+b1001 S
 0%
 0&
 b0 '
 0$
 b0 #
-b0 A
-b0 B
-b0 C
-b0 D
-b0 ;
-b0 3
+0-
+b0 0
+b0 L
+b0 M
+b0 N
+b0 O
+b0 F
+b0 5
 07
-b0 6
-04
-08
+b0 >
+0B
+b0 A
+0?
+0C
 #5
 1!
-1,
-b0 I
-0J
-02
-b0 ?
-b0 >
-b0 =
-b0 <
-b0 @
-b0 1
+13
+13
 #10
 0!
-0,
+03
+03
 #15
 1!
-1,
+13
+13
 #20
 0!
-0,
+03
+03
 #25
 1!
-1,
+13
+13
 #30
 0!
-0,
+03
+03
 #33
 1"
-1-
+1,
+14
+1=
 #35
 1!
-1,
-b100101 h!
-b100101 g!
-zJ
-z2
+13
+13
+b100111 s!
+b100111 r!
 #40
 0!
-0,
+03
+03
 #45
 1!
-1,
+13
+13
 #50
 0!
-0,
+03
+03
 #55
 1!
-1,
+13
+13
 #60
 0!
-0,
+03
+03
 #65
 1!
-1,
+13
+13
 #70
 0!
-0,
+03
+03
 #75
 1!
-1,
+13
+13
 #80
 0!
-0,
+03
+03
 #85
 1!
-1,
+13
+13
 #90
 0!
-0,
+03
+03
 #95
 1!
-1,
+13
+13
 #100
-b11001101011110001101101111010 ,!
-b10100100101000110100110000101010 /!
-b1110111 .!
-0-!
-b11001101011110001101101111010 0!
+b1011110100111101000001000101000 7!
+b11110110001111000101110111100101 :!
+b1100101 9!
+18!
+b1011110100111101000001000101000 ;!
 0!
-0,
-b101111000100100001010011110000 ,!
-b101110101010101110100100010100 /!
-b1101101 .!
-0-!
-b101111000100100001010011110001 0!
-b100110 h!
-b100110 g!
-1%
-1$
-b1100 #
-b111010110010001100110101011000 '
-b111010110010001100110101011000 6
-b1100 3
-17
-18
+03
+03
+b11111010010011001111000110110101 7!
+b1101001110011011010111001001001 :!
+b1101101 9!
+18!
+b11111010010011001111000110110101 ;!
+b101000 s!
+b101000 r!
 #105
 1!
-1,
-1&
-14
+13
+13
+1-
+b1000110 0
+b1000110 5
+17
 #110
 0!
-0,
+03
+03
 #115
 1!
-1,
-0%
-0&
-b0 '
-0$
-b0 #
-b111010110010001100110101011000 D
-b0 3
+13
+13
+0-
+b0 0
+b0 5
 07
-b0 6
-04
-08
 #120
 0!
-0,
+03
+03
 #125
 1!
-1,
+13
+13
 #130
 0!
-0,
+03
+03
 #135
 1!
-1,
+13
+13
 #140
 0!
-0,
+03
+03
 #145
 1!
-1,
-b100111 h!
-b101111000100100001010011110110 0!
-b100111 g!
+13
+13
 #150
 0!
-0,
+03
+03
 #155
 1!
-1,
+13
+13
 #160
 0!
-0,
+03
+03
 #165
 1!
-1,
+13
+13
+b101001 s!
+b1011110100111101000001000101001 ;!
+b11111010010011001111000110110110 ;!
+b101001 r!
 #170
 0!
-0,
+03
+03
 #175
 1!
-1,
+13
+13
 #180
 0!
-0,
+03
+03
 #185
 1!
-1,
-1%
-b1100 #
-b1100 3
-18
+13
+13
 #190
 0!
-0,
+03
+03
 #195
 1!
-1,
-1&
-14
-b111010110010001100110101011000 F
-b111010110010001100110101011000 5
-b111010110010001100110101011000 )
+13
+13
 #200
 0!
-0,
+03
+03
 #205
 1!
-1,
-0%
-0&
-b0 #
-b0 3
-04
-08
-b11111111111111111111111111111111 F
-b11111111111111111111111111111111 5
-b11111111111111111111111111111111 )
+13
+13
+1-
+b11100010 0
+b11100010 5
+17
 #210
 0!
-0,
+03
+03
 #215
 1!
-1,
-b101000 h!
-b101010 h!
-b101010 g!
-b101100 h!
-b101100 g!
-b11111100100111010100010111001010 0!
-b11111100100111010100010111011100 0!
-b11111100100111010100010111101111 0!
-b1000110001111001011101011110111 0!
-b1100100 J!
-b1 L!
-b1100100 T!
-b1101100101 U!
-1V!
+13
+13
+0-
+b0 0
+b0 5
+07
+#220
+0!
+03
+03
+#225
+1!
+13
+13
+#230
+0!
+03
+03
+#235
+1!
+13
+13
+#240
+0!
+03
+03
+#245
+1!
+13
+13
+#250
+0!
+03
+03
+#255
+1!
+13
+13
+b101010 s!
+b1011110100111101000001000101011 ;!
+b11111010010011001111000110111000 ;!
+b101010 r!
+1-
+b100 0
+b100 5
+17
+#260
+0!
+03
+03
+#265
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#270
+0!
+03
+03
+#275
+1!
+13
+13
+#280
+0!
+03
+03
+#285
+1!
+13
+13
+#290
+0!
+03
+03
+#295
+1!
+13
+13
+b101011 s!
+b1011110100111101000001000101110 ;!
+b11111010010011001111000110111011 ;!
+b101011 r!
+#300
+0!
+03
+03
+#305
+1!
+13
+13
+#310
+0!
+03
+03
+#315
+1!
+13
+13
+#320
+0!
+03
+03
+#325
+1!
+13
+13
+1-
+b10000000 0
+b10000000 5
+17
+#330
+0!
+03
+03
+#335
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#340
+0!
+03
+03
+#345
+1!
+13
+13
+#350
+0!
+03
+03
+#355
+1!
+13
+13
+#360
+0!
+03
+03
+#365
+1!
+13
+13
+b101100 s!
+b1011110100111101000001000110010 ;!
+b11111010010011001111000110111111 ;!
+b101100 r!
+#370
+0!
+03
+03
+#375
+1!
+13
+13
+#380
+0!
+03
+03
+#385
+1!
+13
+13
+#390
+0!
+03
+03
+#395
+1!
+13
+13
+#400
+0!
+03
+03
+#405
+1!
+13
+13
+#410
+0!
+03
+03
+#415
+1!
+13
+13
+1-
+b1001011 0
+b1001011 5
+17
+#420
+0!
+03
+03
+#425
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#430
+0!
+03
+03
+#435
+1!
+13
+13
+#440
+0!
+03
+03
+#445
+1!
+13
+13
+#450
+0!
+03
+03
+#455
+1!
+13
+13
+#460
+0!
+03
+03
+#465
+1!
+13
+13
+b101101 s!
+b1011110100111101000001000110111 ;!
+b11111010010011001111000111000100 ;!
+b101101 r!
+#470
+0!
+03
+03
+#475
+1!
+13
+13
+1-
+b11100101 0
+b11100101 5
+17
+#480
+0!
+03
+03
+#485
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#490
+0!
+03
+03
+#495
+1!
+13
+13
+#500
+0!
+03
+03
+#505
+1!
+13
+13
+b101110 s!
+b1011110100111101000001000111101 ;!
+b11111010010011001111000111001010 ;!
+b101110 r!
+#510
+0!
+03
+03
+#515
+1!
+13
+13
+#520
+0!
+03
+03
+#525
+1!
+13
+13
+#530
+0!
+03
+03
+#535
+1!
+13
+13
+1-
+b11010110 0
+b11010110 5
+17
+#540
+0!
+03
+03
+#545
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#550
+0!
+03
+03
+#555
+1!
+13
+13
+#560
+0!
+03
+03
+#565
+1!
+13
+13
+b101111 s!
+b1011110100111101000001001000100 ;!
+b11111010010011001111000111010001 ;!
+b101111 r!
+#570
+0!
+03
+03
+#575
+1!
+13
+13
+#580
+0!
+03
+03
+#585
+1!
+13
+13
+#590
+0!
+03
+03
+#595
+1!
+13
+13
+#600
+0!
+03
+03
+#605
+1!
+13
+13
+1-
+b10010110 0
+b10010110 5
+17
+#610
+0!
+03
+03
+#615
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#620
+0!
+03
+03
+#625
+1!
+13
+13
+#630
+0!
+03
+03
+#635
+1!
+13
+13
+b110000 s!
+b1011110100111101000001001001100 ;!
+b11111010010011001111000111011001 ;!
+b110000 r!
+#640
+0!
+03
+03
+#645
+1!
+13
+13
+#650
+0!
+03
+03
+#655
+1!
+13
+13
+#660
+0!
+03
+03
+#665
+1!
+13
+13
+1-
+b1011 0
+b1011 5
+17
+#670
+0!
+03
+03
+#675
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#680
+0!
+03
+03
+#685
+1!
+13
+13
+#690
+0!
+03
+03
+#695
+1!
+13
+13
+#700
+0!
+03
+03
+#705
+1!
+13
+13
+#710
+0!
+03
+03
+#715
+1!
+13
+13
+#720
+0!
+03
+03
+#725
+1!
+13
+13
+b110001 s!
+b1011110100111101000001001010101 ;!
+b11111010010011001111000111100010 ;!
+b110001 r!
+#730
+0!
+03
+03
+#735
+1!
+13
+13
+1-
+b101101 0
+b101101 5
+17
+#740
+0!
+03
+03
+#745
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#750
+0!
+03
+03
+#755
+1!
+13
+13
+#760
+0!
+03
+03
+#765
+1!
+13
+13
+#770
+0!
+03
+03
+#775
+1!
+13
+13
+#780
+0!
+03
+03
+#785
+1!
+13
+13
+b110010 s!
+b1011110100111101000001001011111 ;!
+b11111010010011001111000111101100 ;!
+b110010 r!
+1-
+b11101001 0
+b11101001 5
+17
+#790
+0!
+03
+03
+#795
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#800
+0!
+03
+03
+#805
+1!
+13
+13
+#810
+0!
+03
+03
+#815
+1!
+13
+13
+b110011 s!
+b1011110100111101000001001101010 ;!
+b11111010010011001111000111110111 ;!
+b110011 r!
+#820
+0!
+03
+03
+#825
+1!
+13
+13
+#830
+0!
+03
+03
+#835
+1!
+13
+13
+#840
+0!
+03
+03
+#845
+1!
+13
+13
+#850
+0!
+03
+03
+#855
+1!
+13
+13
+1-
+b1001100 0
+b1001100 5
+17
+#860
+0!
+03
+03
+#865
+1!
+13
+13
+b110100 s!
+b1011110100111101000001001110110 ;!
+b11111010010011001111001000000011 ;!
+0-
+b0 0
+b110100 r!
+b0 5
+07
+#870
+0!
+03
+03
+#875
+1!
+13
+13
+#880
+0!
+03
+03
+#885
+1!
+13
+13
+#890
+0!
+03
+03
+#895
+1!
+13
+13
+#900
+0!
+03
+03
+#905
+1!
+13
+13
+1-
+b110001 0
+b110001 5
+17
+#910
+0!
+03
+03
+#915
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#920
+0!
+03
+03
+#925
+1!
+13
+13
+#930
+0!
+03
+03
+#935
+1!
+13
+13
+#940
+0!
+03
+03
+#945
+1!
+13
+13
+b110101 s!
+b1011110100111101000001010000011 ;!
+b11111010010011001111001000010000 ;!
+b110101 r!
+#950
+0!
+03
+03
+#955
+1!
+13
+13
+#960
+0!
+03
+03
+#965
+1!
+13
+13
+1-
+b11001000 0
+b11001000 5
+17
+#970
+0!
+03
+03
+#975
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#980
+0!
+03
+03
+#985
+1!
+13
+13
+b110110 s!
+b1011110100111101000001010010001 ;!
+b11111010010011001111001000011110 ;!
+b110110 r!
+#990
+0!
+03
+03
+#995
+1!
+13
+13
+#1000
+0!
+03
+03
+#1005
+1!
+13
+13
+#1010
+0!
+03
+03
+#1015
+1!
+13
+13
+#1020
+0!
+03
+03
+#1025
+1!
+13
+13
+#1030
+0!
+03
+03
+#1035
+1!
+13
+13
+1-
+b110000 0
+b110000 5
+17
+#1040
+0!
+03
+03
+#1045
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1050
+0!
+03
+03
+#1055
+1!
+13
+13
+#1060
+0!
+03
+03
+#1065
+1!
+13
+13
+#1070
+0!
+03
+03
+#1075
+1!
+13
+13
+#1080
+0!
+03
+03
+#1085
+1!
+13
+13
+#1090
+0!
+03
+03
+#1095
+1!
+13
+13
+b110111 s!
+b1011110100111101000001010100000 ;!
+b11111010010011001111001000101101 ;!
+b110111 r!
+#1100
+0!
+03
+03
+#1105
+1!
+13
+13
+#1110
+0!
+03
+03
+#1115
+1!
+13
+13
+#1120
+0!
+03
+03
+#1125
+1!
+13
+13
+#1130
+0!
+03
+03
+#1135
+1!
+13
+13
+#1140
+0!
+03
+03
+#1145
+1!
+13
+13
+1-
+b10011001 0
+b10011001 5
+17
+#1150
+0!
+03
+03
+#1155
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1160
+0!
+03
+03
+#1165
+1!
+13
+13
+#1170
+0!
+03
+03
+#1175
+1!
+13
+13
+b111000 s!
+b1011110100111101000001010110000 ;!
+b11111010010011001111001000111101 ;!
+b111000 r!
+#1180
+0!
+03
+03
+#1185
+1!
+13
+13
+#1190
+0!
+03
+03
+#1195
+1!
+13
+13
+#1200
+0!
+03
+03
+#1205
+1!
+13
+13
+1-
+b11111100 0
+b11111100 5
+17
+#1210
+0!
+03
+03
+#1215
+1!
+13
+13
+b111001 s!
+b1011110100111101000001011000001 ;!
+b11111010010011001111001001001110 ;!
+0-
+b0 0
+b111001 r!
+b0 5
+07
+#1220
+0!
+03
+03
+#1225
+1!
+13
+13
+#1230
+0!
+03
+03
+#1235
+1!
+13
+13
+#1240
+0!
+03
+03
+#1245
+1!
+13
+13
+#1250
+0!
+03
+03
+#1255
+1!
+13
+13
+1-
+b10111110 0
+b10111110 5
+17
+#1260
+0!
+03
+03
+#1265
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1270
+0!
+03
+03
+#1275
+1!
+13
+13
+#1280
+0!
+03
+03
+#1285
+1!
+13
+13
+#1290
+0!
+03
+03
+#1295
+1!
+13
+13
+#1300
+0!
+03
+03
+#1305
+1!
+13
+13
+b111010 s!
+b1011110100111101000001011010011 ;!
+b11111010010011001111001001100000 ;!
+b111010 r!
+#1310
+0!
+03
+03
+#1315
+1!
+13
+13
+#1320
+0!
+03
+03
+#1325
+1!
+13
+13
+#1330
+0!
+03
+03
+#1335
+1!
+13
+13
+1-
+b1 0
+b1 5
+17
+#1340
+0!
+03
+03
+#1345
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1350
+0!
+03
+03
+#1355
+1!
+13
+13
+b111011 s!
+b1011110100111101000001011100110 ;!
+b11111010010011001111001001110011 ;!
+b111011 r!
+#1360
+0!
+03
+03
+#1365
+1!
+13
+13
+#1370
+0!
+03
+03
+#1375
+1!
+13
+13
+#1380
+0!
+03
+03
+#1385
+1!
+13
+13
+#1390
+0!
+03
+03
+#1395
+1!
+13
+13
+1-
+b1111000 0
+b1111000 5
+17
+#1400
+0!
+03
+03
+#1405
+1!
+13
+13
+b111100 s!
+b1011110100111101000001011111010 ;!
+b11111010010011001111001010000111 ;!
+0-
+b0 0
+b111100 r!
+b0 5
+07
+#1410
+0!
+03
+03
+#1415
+1!
+13
+13
+#1420
+0!
+03
+03
+#1425
+1!
+13
+13
+1-
+b1 0
+b1 5
+17
+#1430
+0!
+03
+03
+#1435
+1!
+13
+13
+b111101 s!
+b1011110100111101000001100001111 ;!
+b11111010010011001111001010011100 ;!
+0-
+b0 0
+b111101 r!
+b0 5
+07
+#1440
+0!
+03
+03
+#1445
+1!
+13
+13
+#1450
+0!
+03
+03
+#1455
+1!
+13
+13
+#1460
+0!
+03
+03
+#1465
+1!
+13
+13
+1-
+b11011110 0
+b11011110 5
+17
+#1470
+0!
+03
+03
+#1475
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1480
+0!
+03
+03
+#1485
+1!
+13
+13
+b111110 s!
+b1011110100111101000001100100101 ;!
+b11111010010011001111001010110010 ;!
+b111110 r!
+#1490
+0!
+03
+03
+#1495
+1!
+13
+13
+#1500
+0!
+03
+03
+#1505
+1!
+13
+13
+#1510
+0!
+03
+03
+#1515
+1!
+13
+13
+#1520
+0!
+03
+03
+#1525
+1!
+13
+13
+#1530
+0!
+03
+03
+#1535
+1!
+13
+13
+1-
+b11101000 0
+b11101000 5
+17
+#1540
+0!
+03
+03
+#1545
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1550
+0!
+03
+03
+#1555
+1!
+13
+13
+#1560
+0!
+03
+03
+#1565
+1!
+13
+13
+#1570
+0!
+03
+03
+#1575
+1!
+13
+13
+b111111 s!
+b1011110100111101000001100111100 ;!
+b11111010010011001111001011001001 ;!
+b111111 r!
+#1580
+0!
+03
+03
+#1585
+1!
+13
+13
+1-
+b1110001 0
+b1110001 5
+17
+#1590
+0!
+03
+03
+#1595
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1600
+0!
+03
+03
+#1605
+1!
+13
+13
+#1610
+0!
+03
+03
+#1615
+1!
+13
+13
+#1620
+0!
+03
+03
+#1625
+1!
+13
+13
+b1000000 s!
+b1011110100111101000001101010100 ;!
+b11111010010011001111001011100001 ;!
+b1000000 r!
+#1630
+0!
+03
+03
+#1635
+1!
+13
+13
+#1640
+0!
+03
+03
+#1645
+1!
+13
+13
+#1650
+0!
+03
+03
+#1655
+1!
+13
+13
+1-
+b100 0
+b100 5
+17
+#1660
+0!
+03
+03
+#1665
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1670
+0!
+03
+03
+#1675
+1!
+13
+13
+#1680
+0!
+03
+03
+#1685
+1!
+13
+13
+#1690
+0!
+03
+03
+#1695
+1!
+13
+13
+#1700
+0!
+03
+03
+#1705
+1!
+13
+13
+b1000001 s!
+b1011110100111101000001101101101 ;!
+b11111010010011001111001011111010 ;!
+b1000001 r!
+#1710
+0!
+03
+03
+#1715
+1!
+13
+13
+#1720
+0!
+03
+03
+#1725
+1!
+13
+13
+#1730
+0!
+03
+03
+#1735
+1!
+13
+13
+1-
+b11110 0
+b11110 5
+17
+#1740
+0!
+03
+03
+#1745
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1750
+0!
+03
+03
+#1755
+1!
+13
+13
+#1760
+0!
+03
+03
+#1765
+1!
+13
+13
+#1770
+0!
+03
+03
+#1775
+1!
+13
+13
+#1780
+0!
+03
+03
+#1785
+1!
+13
+13
+#1790
+0!
+03
+03
+#1795
+1!
+13
+13
+b1000010 s!
+b1011110100111101000001110000111 ;!
+b11111010010011001111001100010100 ;!
+b1000010 r!
+#1800
+0!
+03
+03
+#1805
+1!
+13
+13
+#1810
+0!
+03
+03
+#1815
+1!
+13
+13
+#1820
+0!
+03
+03
+#1825
+1!
+13
+13
+#1830
+0!
+03
+03
+#1835
+1!
+13
+13
+1-
+b10001 0
+b10001 5
+17
+#1840
+0!
+03
+03
+#1845
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1850
+0!
+03
+03
+#1855
+1!
+13
+13
+#1860
+0!
+03
+03
+#1865
+1!
+13
+13
+b1000011 s!
+b1011110100111101000001110100010 ;!
+b11111010010011001111001100101111 ;!
+b1000011 r!
+1-
+b1101101 0
+b1101101 5
+17
+#1870
+0!
+03
+03
+#1875
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1880
+0!
+03
+03
+#1885
+1!
+13
+13
+#1890
+0!
+03
+03
+#1895
+1!
+13
+13
+#1900
+0!
+03
+03
+#1905
+1!
+13
+13
+#1910
+0!
+03
+03
+#1915
+1!
+13
+13
+#1920
+0!
+03
+03
+#1925
+1!
+13
+13
+b1000100 s!
+b1011110100111101000001110111110 ;!
+b11111010010011001111001101001011 ;!
+b1000100 r!
+#1930
+0!
+03
+03
+#1935
+1!
+13
+13
+#1940
+0!
+03
+03
+#1945
+1!
+13
+13
+1-
+b11001000 0
+b11001000 5
+17
+#1950
+0!
+03
+03
+#1955
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#1960
+0!
+03
+03
+#1965
+1!
+13
+13
+b1000101 s!
+b1011110100111101000001111011011 ;!
+b11111010010011001111001101101000 ;!
+b1000101 r!
+#1970
+0!
+03
+03
+#1975
+1!
+13
+13
+#1980
+0!
+03
+03
+#1985
+1!
+13
+13
+#1990
+0!
+03
+03
+#1995
+1!
+13
+13
+1-
+b11111010 0
+b11111010 5
+17
+#2000
+0!
+03
+03
+#2005
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2010
+0!
+03
+03
+#2015
+1!
+13
+13
+#2020
+0!
+03
+03
+#2025
+1!
+13
+13
+b1000110 s!
+b1011110100111101000001111111001 ;!
+b11111010010011001111001110000110 ;!
+b1000110 r!
+1-
+b1111101 0
+b1111101 5
+17
+#2030
+0!
+03
+03
+#2035
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2040
+0!
+03
+03
+#2045
+1!
+13
+13
+#2050
+0!
+03
+03
+#2055
+1!
+13
+13
+#2060
+0!
+03
+03
+#2065
+1!
+13
+13
+b1000111 s!
+b1011110100111101000010000011000 ;!
+b11111010010011001111001110100101 ;!
+b1000111 r!
+#2070
+0!
+03
+03
+#2075
+1!
+13
+13
+#2080
+0!
+03
+03
+#2085
+1!
+13
+13
+1-
+b11101 0
+b11101 5
+17
+#2090
+0!
+03
+03
+#2095
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2100
+0!
+03
+03
+#2105
+1!
+13
+13
+#2110
+0!
+03
+03
+#2115
+1!
+13
+13
+#2120
+0!
+03
+03
+#2125
+1!
+13
+13
+#2130
+0!
+03
+03
+#2135
+1!
+13
+13
+b1001000 s!
+b1011110100111101000010000111000 ;!
+b11111010010011001111001111000101 ;!
+b1001000 r!
+#2140
+0!
+03
+03
+#2145
+1!
+13
+13
+#2150
+0!
+03
+03
+#2155
+1!
+13
+13
+#2160
+0!
+03
+03
+#2165
+1!
+13
+13
+#2170
+0!
+03
+03
+#2175
+1!
+13
+13
+#2180
+0!
+03
+03
+#2185
+1!
+13
+13
+1-
+b10101010 0
+b10101010 5
+17
+#2190
+0!
+03
+03
+#2195
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2200
+0!
+03
+03
+#2205
+1!
+13
+13
+#2210
+0!
+03
+03
+#2215
+1!
+13
+13
+b1001001 s!
+b1011110100111101000010001011001 ;!
+b11111010010011001111001111100110 ;!
+b1001001 r!
+#2220
+0!
+03
+03
+#2225
+1!
+13
+13
+#2230
+0!
+03
+03
+#2235
+1!
+13
+13
+1-
+b110100 0
+b110100 5
+17
+#2240
+0!
+03
+03
+#2245
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2250
+0!
+03
+03
+#2255
+1!
+13
+13
+#2260
+0!
+03
+03
+#2265
+1!
+13
+13
+#2270
+0!
+03
+03
+#2275
+1!
+13
+13
+#2280
+0!
+03
+03
+#2285
+1!
+13
+13
+#2290
+0!
+03
+03
+#2295
+1!
+13
+13
+b1001010 s!
+b1011110100111101000010001111011 ;!
+b11111010010011001111010000001000 ;!
+b1001010 r!
+#2300
+0!
+03
+03
+#2305
+1!
+13
+13
+#2310
+0!
+03
+03
+#2315
+1!
+13
+13
+1-
+b11011011 0
+b11011011 5
+17
+#2320
+0!
+03
+03
+#2325
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2330
+0!
+03
+03
+#2335
+1!
+13
+13
+#2340
+0!
+03
+03
+#2345
+1!
+13
+13
+#2350
+0!
+03
+03
+#2355
+1!
+13
+13
+#2360
+0!
+03
+03
+#2365
+1!
+13
+13
+#2370
+0!
+03
+03
+#2375
+1!
+13
+13
+b1001011 s!
+b1011110100111101000010010011110 ;!
+b11111010010011001111010000101011 ;!
+b1001011 r!
+#2380
+0!
+03
+03
+#2385
+1!
+13
+13
+1-
+b1101001 0
+b1101001 5
+17
+#2390
+0!
+03
+03
+#2395
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2400
+0!
+03
+03
+#2405
+1!
+13
+13
+#2410
+0!
+03
+03
+#2415
+1!
+13
+13
+b1001100 s!
+b1011110100111101000010011000010 ;!
+b11111010010011001111010001001111 ;!
+b1001100 r!
+#2420
+0!
+03
+03
+#2425
+1!
+13
+13
+#2430
+0!
+03
+03
+#2435
+1!
+13
+13
+#2440
+0!
+03
+03
+#2445
+1!
+13
+13
+#2450
+0!
+03
+03
+#2455
+1!
+13
+13
+#2460
+0!
+03
+03
+#2465
+1!
+13
+13
+1-
+b1110111 0
+b1110111 5
+17
+#2470
+0!
+03
+03
+#2475
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2480
+0!
+03
+03
+#2485
+1!
+13
+13
+#2490
+0!
+03
+03
+#2495
+1!
+13
+13
+#2500
+0!
+03
+03
+#2505
+1!
+13
+13
+#2510
+0!
+03
+03
+#2515
+1!
+13
+13
+#2520
+0!
+03
+03
+#2525
+1!
+13
+13
+b1001101 s!
+b1011110100111101000010011100111 ;!
+b11111010010011001111010001110100 ;!
+b1001101 r!
+#2530
+0!
+03
+03
+#2535
+1!
+13
+13
+#2540
+0!
+03
+03
+#2545
+1!
+13
+13
+#2550
+0!
+03
+03
+#2555
+1!
+13
+13
+1-
+b11 0
+b11 5
+17
+#2560
+0!
+03
+03
+#2565
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2570
+0!
+03
+03
+#2575
+1!
+13
+13
+#2580
+0!
+03
+03
+#2585
+1!
+13
+13
+#2590
+0!
+03
+03
+#2595
+1!
+13
+13
+b1001110 s!
+b1011110100111101000010100001101 ;!
+b11111010010011001111010010011010 ;!
+b1001110 r!
+#2600
+0!
+03
+03
+#2605
+1!
+13
+13
+1-
+b10000101 0
+b10000101 5
+17
+#2610
+0!
+03
+03
+#2615
+1!
+13
+13
+b1001111 s!
+b1011110100111101000010100110100 ;!
+b11111010010011001111010011000001 ;!
+0-
+b0 0
+b1001111 r!
+b0 5
+07
+#2620
+0!
+03
+03
+#2625
+1!
+13
+13
+#2630
+0!
+03
+03
+#2635
+1!
+13
+13
+1-
+b111001 0
+b111001 5
+17
+#2640
+0!
+03
+03
+#2645
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2650
+0!
+03
+03
+#2655
+1!
+13
+13
+#2660
+0!
+03
+03
+#2665
+1!
+13
+13
+b1010000 s!
+b1011110100111101000010101011100 ;!
+b11111010010011001111010011101001 ;!
+b1010000 r!
+1-
+b100101 0
+b100101 5
+17
+#2670
+0!
+03
+03
+#2675
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2680
+0!
+03
+03
+#2685
+1!
+13
+13
+#2690
+0!
+03
+03
+#2695
+1!
+13
+13
+#2700
+0!
+03
+03
+#2705
+1!
+13
+13
+b1010001 s!
+b1011110100111101000010110000101 ;!
+b11111010010011001111010100010010 ;!
+b1010001 r!
+#2710
+0!
+03
+03
+#2715
+1!
+13
+13
+#2720
+0!
+03
+03
+#2725
+1!
+13
+13
+#2730
+0!
+03
+03
+#2735
+1!
+13
+13
+#2740
+0!
+03
+03
+#2745
+1!
+13
+13
+1-
+b10100 0
+b10100 5
+17
+#2750
+0!
+03
+03
+#2755
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2760
+0!
+03
+03
+#2765
+1!
+13
+13
+#2770
+0!
+03
+03
+#2775
+1!
+13
+13
+#2780
+0!
+03
+03
+#2785
+1!
+13
+13
+#2790
+0!
+03
+03
+#2795
+1!
+13
+13
+b1010010 s!
+b1011110100111101000010110101111 ;!
+b11111010010011001111010100111100 ;!
+b1010010 r!
+#2800
+0!
+03
+03
+#2805
+1!
+13
+13
+#2810
+0!
+03
+03
+#2815
+1!
+13
+13
+#2820
+0!
+03
+03
+#2825
+1!
+13
+13
+1-
+b100001 0
+b100001 5
+17
+#2830
+0!
+03
+03
+#2835
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2840
+0!
+03
+03
+#2845
+1!
+13
+13
+#2850
+0!
+03
+03
+#2855
+1!
+13
+13
+#2860
+0!
+03
+03
+#2865
+1!
+13
+13
+#2870
+0!
+03
+03
+#2875
+1!
+13
+13
+#2880
+0!
+03
+03
+#2885
+1!
+13
+13
+b1010011 s!
+b1011110100111101000010111011010 ;!
+b11111010010011001111010101100111 ;!
+b1010011 r!
+#2890
+0!
+03
+03
+#2895
+1!
+13
+13
+#2900
+0!
+03
+03
+#2905
+1!
+13
+13
+#2910
+0!
+03
+03
+#2915
+1!
+13
+13
+1-
+b11010000 0
+b11010000 5
+17
+#2920
+0!
+03
+03
+#2925
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#2930
+0!
+03
+03
+#2935
+1!
+13
+13
+#2940
+0!
+03
+03
+#2945
+1!
+13
+13
+#2950
+0!
+03
+03
+#2955
+1!
+13
+13
+#2960
+0!
+03
+03
+#2965
+1!
+13
+13
+b1010100 s!
+b1011110100111101000011000000110 ;!
+b11111010010011001111010110010011 ;!
+b1010100 r!
+#2970
+0!
+03
+03
+#2975
+1!
+13
+13
+#2980
+0!
+03
+03
+#2985
+1!
+13
+13
+#2990
+0!
+03
+03
+#2995
+1!
+13
+13
+1-
+b1100001 0
+b1100001 5
+17
+#3000
+0!
+03
+03
+#3005
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3010
+0!
+03
+03
+#3015
+1!
+13
+13
+b1010101 s!
+b1011110100111101000011000110011 ;!
+b11111010010011001111010111000000 ;!
+b1010101 r!
+#3020
+0!
+03
+03
+#3025
+1!
+13
+13
+#3030
+0!
+03
+03
+#3035
+1!
+13
+13
+#3040
+0!
+03
+03
+#3045
+1!
+13
+13
+#3050
+0!
+03
+03
+#3055
+1!
+13
+13
+#3060
+0!
+03
+03
+#3065
+1!
+13
+13
+1-
+b1010000 0
+b1010000 5
+17
+#3070
+0!
+03
+03
+#3075
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3080
+0!
+03
+03
+#3085
+1!
+13
+13
+#3090
+0!
+03
+03
+#3095
+1!
+13
+13
+#3100
+0!
+03
+03
+#3105
+1!
+13
+13
+#3110
+0!
+03
+03
+#3115
+1!
+13
+13
+b1010110 s!
+b1011110100111101000011001100001 ;!
+b11111010010011001111010111101110 ;!
+b1010110 r!
+#3120
+0!
+03
+03
+#3125
+1!
+13
+13
+1-
+b1101100 0
+b1101100 5
+17
+#3130
+0!
+03
+03
+#3135
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3140
+0!
+03
+03
+#3145
+1!
+13
+13
+b1010111 s!
+b1011110100111101000011010010000 ;!
+b11111010010011001111011000011101 ;!
+b1010111 r!
+#3150
+0!
+03
+03
+#3155
+1!
+13
+13
+1-
+b1011101 0
+b1011101 5
+17
+#3160
+0!
+03
+03
+#3165
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3170
+0!
+03
+03
+#3175
+1!
+13
+13
+b1011000 s!
+b1011110100111101000011011000000 ;!
+b11111010010011001111011001001101 ;!
+b1011000 r!
+#3180
+0!
+03
+03
+#3185
+1!
+13
+13
+#3190
+0!
+03
+03
+#3195
+1!
+13
+13
+#3200
+0!
+03
+03
+#3205
+1!
+13
+13
+1-
+b11101001 0
+b11101001 5
+17
+#3210
+0!
+03
+03
+#3215
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3220
+0!
+03
+03
+#3225
+1!
+13
+13
+b1011001 s!
+b1011110100111101000011011110001 ;!
+b11111010010011001111011001111110 ;!
+b1011001 r!
+#3230
+0!
+03
+03
+#3235
+1!
+13
+13
+#3240
+0!
+03
+03
+#3245
+1!
+13
+13
+#3250
+0!
+03
+03
+#3255
+1!
+13
+13
+1-
+b10011001 0
+b10011001 5
+17
+#3260
+0!
+03
+03
+#3265
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3270
+0!
+03
+03
+#3275
+1!
+13
+13
+#3280
+0!
+03
+03
+#3285
+1!
+13
+13
+#3290
+0!
+03
+03
+#3295
+1!
+13
+13
+b1011010 s!
+b1011110100111101000011100100011 ;!
+b11111010010011001111011010110000 ;!
+b1011010 r!
+#3300
+0!
+03
+03
+#3305
+1!
+13
+13
+1-
+b11011111 0
+b11011111 5
+17
+#3310
+0!
+03
+03
+#3315
+1!
+13
+13
+b1011011 s!
+b1011110100111101000011101010110 ;!
+b11111010010011001111011011100011 ;!
+0-
+b0 0
+b1011011 r!
+b0 5
+07
+#3320
+0!
+03
+03
+#3325
+1!
+13
+13
+#3330
+0!
+03
+03
+#3335
+1!
+13
+13
+#3340
+0!
+03
+03
+#3345
+1!
+13
+13
+#3350
+0!
+03
+03
+#3355
+1!
+13
+13
+1-
+b111100 0
+b111100 5
+17
+#3360
+0!
+03
+03
+#3365
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3370
+0!
+03
+03
+#3375
+1!
+13
+13
+#3380
+0!
+03
+03
+#3385
+1!
+13
+13
+#3390
+0!
+03
+03
+#3395
+1!
+13
+13
+#3400
+0!
+03
+03
+#3405
+1!
+13
+13
+#3410
+0!
+03
+03
+#3415
+1!
+13
+13
+b1011100 s!
+b1011110100111101000011110001010 ;!
+b11111010010011001111011100010111 ;!
+b1011100 r!
+1-
+b111011 0
+b111011 5
+17
+#3420
+0!
+03
+03
+#3425
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3430
+0!
+03
+03
+#3435
+1!
+13
+13
+#3440
+0!
+03
+03
+#3445
+1!
+13
+13
+#3450
+0!
+03
+03
+#3455
+1!
+13
+13
+#3460
+0!
+03
+03
+#3465
+1!
+13
+13
+#3470
+0!
+03
+03
+#3475
+1!
+13
+13
+b1011101 s!
+b1011110100111101000011110111111 ;!
+b11111010010011001111011101001100 ;!
+b1011101 r!
+#3480
+0!
+03
+03
+#3485
+1!
+13
+13
+1-
+b10101011 0
+b10101011 5
+17
+#3490
+0!
+03
+03
+#3495
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3500
+0!
+03
+03
+#3505
+1!
+13
+13
+#3510
+0!
+03
+03
+#3515
+1!
+13
+13
+b1011110 s!
+b1011110100111101000011111110101 ;!
+b11111010010011001111011110000010 ;!
+b1011110 r!
+1-
+b1100101 0
+b1100101 5
+17
+#3520
+0!
+03
+03
+#3525
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3530
+0!
+03
+03
+#3535
+1!
+13
+13
+#3540
+0!
+03
+03
+#3545
+1!
+13
+13
+#3550
+0!
+03
+03
+#3555
+1!
+13
+13
+#3560
+0!
+03
+03
+#3565
+1!
+13
+13
+b1011111 s!
+b1011110100111101000100000101100 ;!
+b11111010010011001111011110111001 ;!
+b1011111 r!
+#3570
+0!
+03
+03
+#3575
+1!
+13
+13
+#3580
+0!
+03
+03
+#3585
+1!
+13
+13
+1-
+b101111 0
+b101111 5
+17
+#3590
+0!
+03
+03
+#3595
+1!
+13
+13
+b1100000 s!
+b1011110100111101000100001100100 ;!
+b11111010010011001111011111110001 ;!
+0-
+b0 0
+b1100000 r!
+b0 5
+07
+#3600
+0!
+03
+03
+#3605
+1!
+13
+13
+#3610
+0!
+03
+03
+#3615
+1!
+13
+13
+#3620
+0!
+03
+03
+#3625
+1!
+13
+13
+1-
+b10010 0
+b10010 5
+17
+#3630
+0!
+03
+03
+#3635
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3640
+0!
+03
+03
+#3645
+1!
+13
+13
+#3650
+0!
+03
+03
+#3655
+1!
+13
+13
+#3660
+0!
+03
+03
+#3665
+1!
+13
+13
+#3670
+0!
+03
+03
+#3675
+1!
+13
+13
+b1100001 s!
+b1011110100111101000100010011101 ;!
+b11111010010011001111100000101010 ;!
+b1100001 r!
+1-
+b11000010 0
+b11000010 5
+17
+#3680
+0!
+03
+03
+#3685
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3690
+0!
+03
+03
+#3695
+1!
+13
+13
+#3700
+0!
+03
+03
+#3705
+1!
+13
+13
+#3710
+0!
+03
+03
+#3715
+1!
+13
+13
+#3720
+0!
+03
+03
+#3725
+1!
+13
+13
+#3730
+0!
+03
+03
+#3735
+1!
+13
+13
+b1100010 s!
+b1011110100111101000100011010111 ;!
+b11111010010011001111100001100100 ;!
+b1100010 r!
+#3740
+0!
+03
+03
+#3745
+1!
+13
+13
+1-
+b10 0
+b10 5
+17
+#3750
+0!
+03
+03
+#3755
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3760
+0!
+03
+03
+#3765
+1!
+13
+13
+#3770
+0!
+03
+03
+#3775
+1!
+13
+13
+#3780
+0!
+03
+03
+#3785
+1!
+13
+13
+#3790
+0!
+03
+03
+#3795
+1!
+13
+13
+#3800
+0!
+03
+03
+#3805
+1!
+13
+13
+b1100011 s!
+b1011110100111101000100100010010 ;!
+b11111010010011001111100010011111 ;!
+b1100011 r!
+#3810
+0!
+03
+03
+#3815
+1!
+13
+13
+#3820
+0!
+03
+03
+#3825
+1!
+13
+13
+#3830
+0!
+03
+03
+#3835
+1!
+13
+13
+#3840
+0!
+03
+03
+#3845
+1!
+13
+13
+1-
+b1011111 0
+b1011111 5
+17
+#3850
+0!
+03
+03
+#3855
+1!
+13
+13
+b1100100 s!
+b1011110100111101000100101001110 ;!
+b11111010010011001111100011011011 ;!
+0-
+b0 0
+b1100100 r!
+b0 5
+07
+#3860
+0!
+03
+03
+#3865
+1!
+13
+13
+#3870
+0!
+03
+03
+#3875
+1!
+13
+13
+#3880
+0!
+03
+03
+#3885
+1!
+13
+13
+#3890
+0!
+03
+03
+#3895
+1!
+13
+13
+1-
+b1100011 0
+b1100011 5
+17
+#3900
+0!
+03
+03
+#3905
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3910
+0!
+03
+03
+#3915
+1!
+13
+13
+b1100101 s!
+b1011110100111101000100110001011 ;!
+b11111010010011001111100100011000 ;!
+b1100101 r!
+#3920
+0!
+03
+03
+#3925
+1!
+13
+13
+#3930
+0!
+03
+03
+#3935
+1!
+13
+13
+#3940
+0!
+03
+03
+#3945
+1!
+13
+13
+1-
+b10011110 0
+b10011110 5
+17
+#3950
+0!
+03
+03
+#3955
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#3960
+0!
+03
+03
+#3965
+1!
+13
+13
+#3970
+0!
+03
+03
+#3975
+1!
+13
+13
+b1100110 s!
+b1011110100111101000100111001001 ;!
+b11111010010011001111100101010110 ;!
+b1100110 r!
+#3980
+0!
+03
+03
+#3985
+1!
+13
+13
+#3990
+0!
+03
+03
+#3995
+1!
+13
+13
+#4000
+0!
+03
+03
+#4005
+1!
+13
+13
+#4010
+0!
+03
+03
+#4015
+1!
+13
+13
+1-
+b1111 0
+b1111 5
+17
+#4020
+0!
+03
+03
+#4025
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4030
+0!
+03
+03
+#4035
+1!
+13
+13
+#4040
+0!
+03
+03
+#4045
+1!
+13
+13
+#4050
+0!
+03
+03
+#4055
+1!
+13
+13
+#4060
+0!
+03
+03
+#4065
+1!
+13
+13
+#4070
+0!
+03
+03
+#4075
+1!
+13
+13
+b1100111 s!
+b1011110100111101000101000001000 ;!
+b11111010010011001111100110010101 ;!
+b1100111 r!
+#4080
+0!
+03
+03
+#4085
+1!
+13
+13
+#4090
+0!
+03
+03
+#4095
+1!
+13
+13
+#4100
+0!
+03
+03
+#4105
+1!
+13
+13
+#4110
+0!
+03
+03
+#4115
+1!
+13
+13
+1-
+b101101 0
+b101101 5
+17
+#4120
+0!
+03
+03
+#4125
+1!
+13
+13
+b1101000 s!
+b1011110100111101000101001001000 ;!
+b11111010010011001111100111010101 ;!
+0-
+b0 0
+b1101000 r!
+b0 5
+07
+#4130
+0!
+03
+03
+#4135
+1!
+13
+13
+#4140
+0!
+03
+03
+#4145
+1!
+13
+13
+#4150
+0!
+03
+03
+#4155
+1!
+13
+13
+#4160
+0!
+03
+03
+#4165
+1!
+13
+13
+#4170
+0!
+03
+03
+#4175
+1!
+13
+13
+1-
+b11101011 0
+b11101011 5
+17
+#4180
+0!
+03
+03
+#4185
+1!
+13
+13
+b1101001 s!
+b1011110100111101000101010001001 ;!
+b11111010010011001111101000010110 ;!
+0-
+b0 0
+b1101001 r!
+b0 5
+07
+1-
+b101100 0
+b101100 5
+17
+#4190
+0!
+03
+03
+#4195
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4200
+0!
+03
+03
+#4205
+1!
+13
+13
+#4210
+0!
+03
+03
+#4215
+1!
+13
+13
+#4220
+0!
+03
+03
+#4225
+1!
+13
+13
+#4230
+0!
+03
+03
+#4235
+1!
+13
+13
+b1101010 s!
+b1011110100111101000101011001011 ;!
+b11111010010011001111101001011000 ;!
+b1101010 r!
+#4240
+0!
+03
+03
+#4245
+1!
+13
+13
+1-
+b100010 0
+b100010 5
+17
+#4250
+0!
+03
+03
+#4255
+1!
+13
+13
+b1101011 s!
+b1011110100111101000101100001110 ;!
+b11111010010011001111101010011011 ;!
+0-
+b0 0
+b1101011 r!
+b0 5
+07
+#4260
+0!
+03
+03
+#4265
+1!
+13
+13
+1-
+b11100 0
+b11100 5
+17
+#4270
+0!
+03
+03
+#4275
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4280
+0!
+03
+03
+#4285
+1!
+13
+13
+#4290
+0!
+03
+03
+#4295
+1!
+13
+13
+b1101100 s!
+b1011110100111101000101101010010 ;!
+b11111010010011001111101011011111 ;!
+b1101100 r!
+1-
+b10101110 0
+b10101110 5
+17
+#4300
+0!
+03
+03
+#4305
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4310
+0!
+03
+03
+#4315
+1!
+13
+13
+#4320
+0!
+03
+03
+#4325
+1!
+13
+13
+#4330
+0!
+03
+03
+#4335
+1!
+13
+13
+#4340
+0!
+03
+03
+#4345
+1!
+13
+13
+#4350
+0!
+03
+03
+#4355
+1!
+13
+13
+b1101101 s!
+b1011110100111101000101110010111 ;!
+b11111010010011001111101100100100 ;!
+b1101101 r!
+#4360
+0!
+03
+03
+#4365
+1!
+13
+13
+#4370
+0!
+03
+03
+#4375
+1!
+13
+13
+#4380
+0!
+03
+03
+#4385
+1!
+13
+13
+#4390
+0!
+03
+03
+#4395
+1!
+13
+13
+1-
+b1001001 0
+b1001001 5
+17
+#4400
+0!
+03
+03
+#4405
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4410
+0!
+03
+03
+#4415
+1!
+13
+13
+b1101110 s!
+b1011110100111101000101111011101 ;!
+b11111010010011001111101101101010 ;!
+b1101110 r!
+#4420
+0!
+03
+03
+#4425
+1!
+13
+13
+#4430
+0!
+03
+03
+#4435
+1!
+13
+13
+#4440
+0!
+03
+03
+#4445
+1!
+13
+13
+1-
+b1111001 0
+b1111001 5
+17
+#4450
+0!
+03
+03
+#4455
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4460
+0!
+03
+03
+#4465
+1!
+13
+13
+b1101111 s!
+b1011110100111101000110000100100 ;!
+b11111010010011001111101110110001 ;!
+b1101111 r!
+#4470
+0!
+03
+03
+#4475
+1!
+13
+13
+#4480
+0!
+03
+03
+#4485
+1!
+13
+13
+1-
+b11010011 0
+b11010011 5
+17
+#4490
+0!
+03
+03
+#4495
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4500
+0!
+03
+03
+#4505
+1!
+13
+13
+b1110000 s!
+b1011110100111101000110001101100 ;!
+b11111010010011001111101111111001 ;!
+b1110000 r!
+#4510
+0!
+03
+03
+#4515
+1!
+13
+13
+#4520
+0!
+03
+03
+#4525
+1!
+13
+13
+#4530
+0!
+03
+03
+#4535
+1!
+13
+13
+#4540
+0!
+03
+03
+#4545
+1!
+13
+13
+#4550
+0!
+03
+03
+#4555
+1!
+13
+13
+1-
+b11110110 0
+b11110110 5
+17
+#4560
+0!
+03
+03
+#4565
+1!
+13
+13
+b1110001 s!
+b1011110100111101000110010110101 ;!
+b11111010010011001111110001000010 ;!
+0-
+b0 0
+b1110001 r!
+b0 5
+07
+#4570
+0!
+03
+03
+#4575
+1!
+13
+13
+#4580
+0!
+03
+03
+#4585
+1!
+13
+13
+#4590
+0!
+03
+03
+#4595
+1!
+13
+13
+#4600
+0!
+03
+03
+#4605
+1!
+13
+13
+1-
+b10001100 0
+b10001100 5
+17
+#4610
+0!
+03
+03
+#4615
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4620
+0!
+03
+03
+#4625
+1!
+13
+13
+#4630
+0!
+03
+03
+#4635
+1!
+13
+13
+b1110010 s!
+b1011110100111101000110011111111 ;!
+b11111010010011001111110010001100 ;!
+b1110010 r!
+1-
+b11000001 0
+b11000001 5
+17
+#4640
+0!
+03
+03
+#4645
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4650
+0!
+03
+03
+#4655
+1!
+13
+13
+#4660
+0!
+03
+03
+#4665
+1!
+13
+13
+b1110011 s!
+b1011110100111101000110101001010 ;!
+b11111010010011001111110011010111 ;!
+b1110011 r!
+1-
+b10100011 0
+b10100011 5
+17
+#4670
+0!
+03
+03
+#4675
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4680
+0!
+03
+03
+#4685
+1!
+13
+13
+#4690
+0!
+03
+03
+#4695
+1!
+13
+13
+b1110100 s!
+b1011110100111101000110110010110 ;!
+b11111010010011001111110100100011 ;!
+b1110100 r!
+#4700
+0!
+03
+03
+#4705
+1!
+13
+13
+#4710
+0!
+03
+03
+#4715
+1!
+13
+13
+1-
+b1100010 0
+b1100010 5
+17
+#4720
+0!
+03
+03
+#4725
+1!
+13
+13
+b1110101 s!
+b1011110100111101000110111100011 ;!
+b11111010010011001111110101110000 ;!
+0-
+b0 0
+b1110101 r!
+b0 5
+07
+#4730
+0!
+03
+03
+#4735
+1!
+13
+13
+1-
+b1111010 0
+b1111010 5
+17
+#4740
+0!
+03
+03
+#4745
+1!
+13
+13
+b1110110 s!
+b1011110100111101000111000110001 ;!
+b11111010010011001111110110111110 ;!
+0-
+b0 0
+b1110110 r!
+b0 5
+07
+#4750
+0!
+03
+03
+#4755
+1!
+13
+13
+#4760
+0!
+03
+03
+#4765
+1!
+13
+13
+1-
+b1010000 0
+b1010000 5
+17
+#4770
+0!
+03
+03
+#4775
+1!
+13
+13
+b1110111 s!
+b1011110100111101000111010000000 ;!
+b11111010010011001111111000001101 ;!
+0-
+b0 0
+b1110111 r!
+b0 5
+07
+#4780
+0!
+03
+03
+#4785
+1!
+13
+13
+1-
+b11100001 0
+b11100001 5
+17
+#4790
+0!
+03
+03
+#4795
+1!
+13
+13
+b1111000 s!
+b1011110100111101000111011010000 ;!
+b11111010010011001111111001011101 ;!
+0-
+b0 0
+b1111000 r!
+b0 5
+07
+#4800
+0!
+03
+03
+#4805
+1!
+13
+13
+#4810
+0!
+03
+03
+#4815
+1!
+13
+13
+1-
+b1001010 0
+b1001010 5
+17
+#4820
+0!
+03
+03
+#4825
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4830
+0!
+03
+03
+#4835
+1!
+13
+13
+b1111001 s!
+b1011110100111101000111100100001 ;!
+b11111010010011001111111010101110 ;!
+b1111001 r!
+1-
+b10001100 0
+b10001100 5
+17
+#4840
+0!
+03
+03
+#4845
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4850
+0!
+03
+03
+#4855
+1!
+13
+13
+#4860
+0!
+03
+03
+#4865
+1!
+13
+13
+#4870
+0!
+03
+03
+#4875
+1!
+13
+13
+#4880
+0!
+03
+03
+#4885
+1!
+13
+13
+#4890
+0!
+03
+03
+#4895
+1!
+13
+13
+b1111010 s!
+b1011110100111101000111101110011 ;!
+b11111010010011001111111100000000 ;!
+b1111010 r!
+#4900
+0!
+03
+03
+#4905
+1!
+13
+13
+#4910
+0!
+03
+03
+#4915
+1!
+13
+13
+#4920
+0!
+03
+03
+#4925
+1!
+13
+13
+#4930
+0!
+03
+03
+#4935
+1!
+13
+13
+#4940
+0!
+03
+03
+#4945
+1!
+13
+13
+1-
+b10110 0
+b10110 5
+17
+#4950
+0!
+03
+03
+#4955
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#4960
+0!
+03
+03
+#4965
+1!
+13
+13
+#4970
+0!
+03
+03
+#4975
+1!
+13
+13
+#4980
+0!
+03
+03
+#4985
+1!
+13
+13
+#4990
+0!
+03
+03
+#4995
+1!
+13
+13
+b1111011 s!
+b1011110100111101000111111000110 ;!
+b11111010010011001111111101010011 ;!
+b1111011 r!
+#5000
+0!
+03
+03
+#5005
+1!
+13
+13
+#5010
+0!
+03
+03
+#5015
+1!
+13
+13
+#5020
+0!
+03
+03
+#5025
+1!
+13
+13
+#5030
+0!
+03
+03
+#5035
+1!
+13
+13
+1-
+b1101101 0
+b1101101 5
+17
+#5040
+0!
+03
+03
+#5045
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5050
+0!
+03
+03
+#5055
+1!
+13
+13
+#5060
+0!
+03
+03
+#5065
+1!
+13
+13
+#5070
+0!
+03
+03
+#5075
+1!
+13
+13
+b1111100 s!
+b1011110100111101001000000011010 ;!
+b11111010010011001111111110100111 ;!
+b1111100 r!
+1-
+b11100100 0
+b11100100 5
+17
+#5080
+0!
+03
+03
+#5085
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5090
+0!
+03
+03
+#5095
+1!
+13
+13
+#5100
+0!
+03
+03
+#5105
+1!
+13
+13
+b1111101 s!
+b1011110100111101001000001101111 ;!
+b11111010010011001111111111111100 ;!
+b1111101 r!
+1-
+b1011 0
+b1011 5
+17
+#5110
+0!
+03
+03
+#5115
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5120
+0!
+03
+03
+#5125
+1!
+13
+13
+#5130
+0!
+03
+03
+#5135
+1!
+13
+13
+#5140
+0!
+03
+03
+#5145
+1!
+13
+13
+b1111110 s!
+b1011110100111101001000011000101 ;!
+b11111010010011010000000001010010 ;!
+b1111110 r!
+#5150
+0!
+03
+03
+#5155
+1!
+13
+13
+1-
+b1010000 0
+b1010000 5
+17
+#5160
+0!
+03
+03
+#5165
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5170
+0!
+03
+03
+#5175
+1!
+13
+13
+#5180
+0!
+03
+03
+#5185
+1!
+13
+13
+b1111111 s!
+b1011110100111101001000100011100 ;!
+b11111010010011010000000010101001 ;!
+b1111111 r!
+#5190
+0!
+03
+03
+#5195
+1!
+13
+13
+#5200
+0!
+03
+03
+#5205
+1!
+13
+13
+1-
+b101011 0
+b101011 5
+17
+#5210
+0!
+03
+03
+#5215
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5220
+0!
+03
+03
+#5225
+1!
+13
+13
+#5230
+0!
+03
+03
+#5235
+1!
+13
+13
+#5240
+0!
+03
+03
+#5245
+1!
+13
+13
+#5250
+0!
+03
+03
+#5255
+1!
+13
+13
+b10000000 s!
+b1011110100111101001000101110100 ;!
+b11111010010011010000000100000001 ;!
+b10000000 r!
+#5260
+0!
+03
+03
+#5265
+1!
+13
+13
+#5270
+0!
+03
+03
+#5275
+1!
+13
+13
+1-
+b1110 0
+b1110 5
+17
+#5280
+0!
+03
+03
+#5285
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5290
+0!
+03
+03
+#5295
+1!
+13
+13
+#5300
+0!
+03
+03
+#5305
+1!
+13
+13
+#5310
+0!
+03
+03
+#5315
+1!
+13
+13
+b10000001 s!
+b1011110100111101001000111001101 ;!
+b11111010010011010000000101011010 ;!
+b10000001 r!
+#5320
+0!
+03
+03
+#5325
+1!
+13
+13
+#5330
+0!
+03
+03
+#5335
+1!
+13
+13
+#5340
+0!
+03
+03
+#5345
+1!
+13
+13
+#5350
+0!
+03
+03
+#5355
+1!
+13
+13
+1-
+b1010001 0
+b1010001 5
+17
+#5360
+0!
+03
+03
+#5365
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5370
+0!
+03
+03
+#5375
+1!
+13
+13
+b10000010 s!
+b1011110100111101001001000100111 ;!
+b11111010010011010000000110110100 ;!
+b10000010 r!
+1-
+b110100 0
+b110100 5
+17
+#5380
+0!
+03
+03
+#5385
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5390
+0!
+03
+03
+#5395
+1!
+13
+13
+#5400
+0!
+03
+03
+#5405
+1!
+13
+13
+#5410
+0!
+03
+03
+#5415
+1!
+13
+13
+#5420
+0!
+03
+03
+#5425
+1!
+13
+13
+#5430
+0!
+03
+03
+#5435
+1!
+13
+13
+b10000011 s!
+b1011110100111101001001010000010 ;!
+b11111010010011010000001000001111 ;!
+b10000011 r!
+#5440
+0!
+03
+03
+#5445
+1!
+13
+13
+#5450
+0!
+03
+03
+#5455
+1!
+13
+13
+#5460
+0!
+03
+03
+#5465
+1!
+13
+13
+1-
+b10 0
+b10 5
+17
+#5470
+0!
+03
+03
+#5475
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5480
+0!
+03
+03
+#5485
+1!
+13
+13
+b10000100 s!
+b1011110100111101001001011011110 ;!
+b11111010010011010000001001101011 ;!
+b10000100 r!
+#5490
+0!
+03
+03
+#5495
+1!
+13
+13
+#5500
+0!
+03
+03
+#5505
+1!
+13
+13
+#5510
+0!
+03
+03
+#5515
+1!
+13
+13
+#5520
+0!
+03
+03
+#5525
+1!
+13
+13
+1-
+b11011001 0
+b11011001 5
+17
+#5530
+0!
+03
+03
+#5535
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5540
+0!
+03
+03
+#5545
+1!
+13
+13
+#5550
+0!
+03
+03
+#5555
+1!
+13
+13
+#5560
+0!
+03
+03
+#5565
+1!
+13
+13
+#5570
+0!
+03
+03
+#5575
+1!
+13
+13
+b10000101 s!
+b1011110100111101001001100111011 ;!
+b11111010010011010000001011001000 ;!
+b10000101 r!
+#5580
+0!
+03
+03
+#5585
+1!
+13
+13
+#5590
+0!
+03
+03
+#5595
+1!
+13
+13
+#5600
+0!
+03
+03
+#5605
+1!
+13
+13
+1-
+b10001000 0
+b10001000 5
+17
+#5610
+0!
+03
+03
+#5615
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5620
+0!
+03
+03
+#5625
+1!
+13
+13
+#5630
+0!
+03
+03
+#5635
+1!
+13
+13
+#5640
+0!
+03
+03
+#5645
+1!
+13
+13
+b10000110 s!
+b1011110100111101001001110011001 ;!
+b11111010010011010000001100100110 ;!
+b10000110 r!
+#5650
+0!
+03
+03
+#5655
+1!
+13
+13
+#5660
+0!
+03
+03
+#5665
+1!
+13
+13
+#5670
+0!
+03
+03
+#5675
+1!
+13
+13
+1-
+b10010010 0
+b10010010 5
+17
+#5680
+0!
+03
+03
+#5685
+1!
+13
+13
+b10000111 s!
+b1011110100111101001001111111000 ;!
+b11111010010011010000001110000101 ;!
+0-
+b0 0
+b10000111 r!
+b0 5
+07
+#5690
+0!
+03
+03
+#5695
+1!
+13
+13
+#5700
+0!
+03
+03
+#5705
+1!
+13
+13
+#5710
+0!
+03
+03
+#5715
+1!
+13
+13
+1-
+b1100010 0
+b1100010 5
+17
+#5720
+0!
+03
+03
+#5725
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5730
+0!
+03
+03
+#5735
+1!
+13
+13
+b10001000 s!
+b1011110100111101001010001011000 ;!
+b11111010010011010000001111100101 ;!
+b10001000 r!
+#5740
+0!
+03
+03
+#5745
+1!
+13
+13
+1-
+b10100011 0
+b10100011 5
+17
+#5750
+0!
+03
+03
+#5755
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5760
+0!
+03
+03
+#5765
+1!
+13
+13
+#5770
+0!
+03
+03
+#5775
+1!
+13
+13
+#5780
+0!
+03
+03
+#5785
+1!
+13
+13
+#5790
+0!
+03
+03
+#5795
+1!
+13
+13
+b10001001 s!
+b1011110100111101001010010111001 ;!
+b11111010010011010000010001000110 ;!
+b10001001 r!
+#5800
+0!
+03
+03
+#5805
+1!
+13
+13
+#5810
+0!
+03
+03
+#5815
+1!
+13
+13
+1-
+b10101011 0
+b10101011 5
+17
+#5820
+0!
+03
+03
+#5825
+1!
+13
+13
+b10001010 s!
+b1011110100111101001010100011011 ;!
+b11111010010011010000010010101000 ;!
+0-
+b0 0
+b10001010 r!
+b0 5
+07
+#5830
+0!
+03
+03
+#5835
+1!
+13
+13
+#5840
+0!
+03
+03
+#5845
+1!
+13
+13
+#5850
+0!
+03
+03
+#5855
+1!
+13
+13
+#5860
+0!
+03
+03
+#5865
+1!
+13
+13
+#5870
+0!
+03
+03
+#5875
+1!
+13
+13
+1-
+b1111111 0
+b1111111 5
+17
+#5880
+0!
+03
+03
+#5885
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5890
+0!
+03
+03
+#5895
+1!
+13
+13
+#5900
+0!
+03
+03
+#5905
+1!
+13
+13
+#5910
+0!
+03
+03
+#5915
+1!
+13
+13
+b10001011 s!
+b1011110100111101001010101111110 ;!
+b11111010010011010000010100001011 ;!
+b10001011 r!
+#5920
+0!
+03
+03
+#5925
+1!
+13
+13
+#5930
+0!
+03
+03
+#5935
+1!
+13
+13
+#5940
+0!
+03
+03
+#5945
+1!
+13
+13
+#5950
+0!
+03
+03
+#5955
+1!
+13
+13
+#5960
+0!
+03
+03
+#5965
+1!
+13
+13
+1-
+b10001100 0
+b10001100 5
+17
+#5970
+0!
+03
+03
+#5975
+1!
+13
+13
+0-
+b0 0
+b0 5
+07
+#5980
+0!
+03
+03
+#5985
+1!
+13
+13
+#5990
+0!
+03
+03
+#5995
+1!
+13
+13
+#6000
+0!
+03
+03
+#6005
+1!
+13
+13
+#6010
+0!
+03
+03
+#6015
+1!
+13
+13
+b10001100 s!
+b10001100 r!
+#6020
+0!
+03
+03
+#6025
+1!
+13
+13
+#6030
+0!
+03
+03
+#6035
+1!
+13
+13
+#6040
+0!
+03
+03
+#6045
+1!
+13
+13
+#6050
+0!
+03
+03
+#6055
+1!
+13
+13
+#6060
+0!
+03
+03
+#6065
+1!
+13
+13
+#6070
+0!
+03
+03
+#6075
+1!
+13
+13
+#6080
+0!
+03
+03
+#6085
+1!
+13
+13
+#6090
+0!
+03
+03
+#6095
+1!
+13
+13
+#6100
+0!
+03
+03
+#6105
+1!
+13
+13
+#6110
+0!
+03
+03
+#6115
+1!
+13
+13
+#6120
+0!
+03
+03
+#6125
+1!
+13
+13
+#6130
+0!
+03
+03
+#6135
+1!
+13
+13
+#6140
+0!
+03
+03
+#6145
+1!
+13
+13
+#6150
+0!
+03
+03
+#6155
+1!
+13
+13
+#6160
+0!
+03
+03
+#6165
+1!
+13
+13
+#6170
+0!
+03
+03
+#6175
+1!
+13
+13
+#6180
+0!
+03
+03
+#6185
+1!
+13
+13
+#6190
+0!
+03
+03
+#6195
+1!
+13
+13
+#6200
+0!
+03
+03
+#6205
+1!
+13
+13
+#6210
+0!
+03
+03
+#6215
+1!
+13
+13
+#6220
+0!
+03
+03
+#6225
+1!
+13
+13
+#6230
+0!
+03
+03
+#6235
+1!
+13
+13
+#6240
+0!
+03
+03
+#6245
+1!
+13
+13
+#6250
+0!
+03
+03
+#6255
+1!
+13
+13
+#6260
+0!
+03
+03
+#6265
+1!
+13
+13
+#6270
+0!
+03
+03
+#6275
+1!
+13
+13
+#6280
+0!
+03
+03
+#6285
+1!
+13
+13
+#6290
+0!
+03
+03
+#6295
+1!
+13
+13
+#6300
+0!
+03
+03
+#6305
+1!
+13
+13
+#6310
+0!
+03
+03
+#6315
+1!
+13
+13
+#6320
+0!
+03
+03
+#6325
+1!
+13
+13
+#6330
+0!
+03
+03
+#6335
+1!
+13
+13
+#6340
+0!
+03
+03
+#6345
+1!
+13
+13
+#6350
+0!
+03
+03
+#6355
+1!
+13
+13
+#6360
+0!
+03
+03
+#6365
+1!
+13
+13
+#6370
+0!
+03
+03
+#6375
+1!
+13
+13
+#6380
+0!
+03
+03
+#6385
+1!
+13
+13
+#6390
+0!
+03
+03
+#6395
+1!
+13
+13
+#6400
+0!
+03
+03
+#6405
+1!
+13
+13
+#6410
+0!
+03
+03
+#6415
+1!
+13
+13
+#6420
+0!
+03
+03
+#6425
+1!
+13
+13
+#6430
+0!
+03
+03
+#6435
+1!
+13
+13
+#6440
+0!
+03
+03
+#6445
+1!
+13
+13
+#6450
+0!
+03
+03
+#6455
+1!
+13
+13
+#6460
+0!
+03
+03
+#6465
+1!
+13
+13
+#6470
+0!
+03
+03
+#6475
+1!
+13
+13
+#6480
+0!
+03
+03
+#6485
+1!
+13
+13
+#6490
+0!
+03
+03
+#6495
+1!
+13
+13
+#6500
+0!
+03
+03
+#6505
+1!
+13
+13
+#6510
+0!
+03
+03
+#6515
+1!
+13
+13
+b10001110 s!
+b10001110 r!
+b10010000 s!
+b10010000 r!
+b11111100100111010100010111001010 ;!
+b11111100100111010100010111011100 ;!
+b11111100100111010100010111101111 ;!
+b11110111101100110010001100010 ;!
+b1100100 U!
+b1 W!
+b1100100 _!
+b1101100101 `!
+1a!

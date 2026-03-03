@@ -13,7 +13,7 @@
 
 	virtual function void build_phase(uvm_phase phase);
       super.build_phase(phase);
-      env = thf_fpga_dsp_env::type_id::create("env",this);
+      env = thf_fpga_dsp_env#(`THF_AXIS_MAX_DATA_WIDTH)::type_id::create("env",this);
     endfunction
 	endclass
 `endif
